@@ -1,4 +1,3 @@
-````markdown
 # SIG130E PDK
 
 SIG130E is an experimental open-source PDK for a virtual 130nm-class CMOS process.
@@ -43,9 +42,6 @@ SIG130E_PDK/
 ├── lvs/         LVS setup files
 ├── cells/       Primitive devices and standard cells
 └── examples/    Sample circuits (inverter, ring oscillator, NAND2)
-````
-
----
 
 ## 🚀 Getting Started
 
@@ -142,7 +138,5 @@ This project is part of an effort to explore open-source IC design workflows in 
 TAKE-HooJoo (@SIG)
 
 ```
-
----
 
 
