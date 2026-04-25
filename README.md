@@ -139,6 +139,12 @@ This project is part of an effort to explore open-source IC design workflows in 
 
 TAKE-HooJoo (@SIG)
 
-```
+## 📚 Related Work
+
+This PDK is part of the technical doujin series:
+
+"オープンソースPDKで遊ぼう"
+
+Presented at 技術書典.
 
 
