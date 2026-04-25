@@ -137,7 +137,8 @@ This project is part of an effort to explore open-source IC design workflows in 
 
 ## ✍️ Author
 
-TAKE-HooJoo (@SIG)
+ほうた@SIG)
+
 
 ## 📚 Related Work
 
