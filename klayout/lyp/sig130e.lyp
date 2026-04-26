@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-properties>
+  <properties>
+    <name>core_area</name>
+    <source>10/0@1</source>
+    <fill-color>#FFF2CC</fill-color>
+    <frame-color>#D6B656</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>io_area</name>
+    <source>11/0@1</source>
+    <fill-color>#F8CECC</fill-color>
+    <frame-color>#B85450</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>nwell</name>
+    <source>20/0@1</source>
+    <fill-color>#A9C4FF</fill-color>
+    <frame-color>#3366CC</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>active</name>
+    <source>21/0@1</source>
+    <fill-color>#8FD19E</fill-color>
+    <frame-color>#2E7D32</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>poly</name>
+    <source>22/0@1</source>
+    <fill-color>#FF8A80</fill-color>
+    <frame-color>#C62828</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>nplus</name>
+    <source>23/0@1</source>
+    <fill-color>#C8E6C9</fill-color>
+    <frame-color>#388E3C</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>pplus</name>
+    <source>24/0@1</source>
+    <fill-color>#F8BBD0</fill-color>
+    <frame-color>#AD1457</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>contact</name>
+    <source>30/0@1</source>
+    <fill-color>#FFFFFF</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>via1</name>
+    <source>31/0@1</source>
+    <fill-color>#EEEEEE</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>via2</name>
+    <source>32/0@1</source>
+    <fill-color>#DDDDDD</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>via3</name>
+    <source>33/0@1</source>
+    <fill-color>#CCCCCC</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>via4</name>
+    <source>34/0@1</source>
+    <fill-color>#BBBBBB</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>metal1</name>
+    <source>40/0@1</source>
+    <fill-color>#80DEEA</fill-color>
+    <frame-color>#00838F</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>metal2</name>
+    <source>41/0@1</source>
+    <fill-color>#CE93D8</fill-color>
+    <frame-color>#6A1B9A</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>metal3</name>
+    <source>42/0@1</source>
+    <fill-color>#FFE082</fill-color>
+    <frame-color>#FF8F00</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>metal4</name>
+    <source>43/0@1</source>
+    <fill-color>#B0BEC5</fill-color>
+    <frame-color>#37474F</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>metal5</name>
+    <source>44/0@1</source>
+    <fill-color>#D7CCC8</fill-color>
+    <frame-color>#4E342E</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>pad</name>
+    <source>50/0@1</source>
+    <fill-color>#FFD54F</fill-color>
+    <frame-color>#F57F17</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>pad_open</name>
+    <source>51/0@1</source>
+    <fill-color>#FFFFFF</fill-color>
+    <frame-color>#F57F17</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>esd</name>
+    <source>52/0@1</source>
+    <fill-color>#FFCCBC</fill-color>
+    <frame-color>#D84315</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>text</name>
+    <source>60/0@1</source>
+    <fill-color>#000000</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>boundary</name>
+    <source>61/0@1</source>
+    <fill-color>#FFFFFF</fill-color>
+    <frame-color>#000000</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>pin</name>
+    <source>62/0@1</source>
+    <fill-color>#00E5FF</fill-color>
+    <frame-color>#006064</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>blockage</name>
+    <source>63/0@1</source>
+    <fill-color>#BDBDBD</fill-color>
+    <frame-color>#424242</frame-color>
+    <visible>true</visible>
+  </properties>
+
+  <properties>
+    <name>fill</name>
+    <source>64/0@1</source>
+    <fill-color>#E0E0E0</fill-color>
+    <frame-color>#757575</frame-color>
+    <visible>true</visible>
+  </properties>
+</layer-properties>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<technology>
+  <name>SIG130E</name>
+  <description>SIG130E Virtual 130nm CMOS PDK</description>
+
+  <group>SIG PDK</group>
+
+  <dbu>0.001</dbu>
+
+  <original-base-path>.</original-base-path>
+  <base-path>.</base-path>
+
+  <layer-properties_file>../lyp/sig130e.lyp</layer-properties_file>
+
+  <reader-options>
+    <gds2>
+      <box-mode>0</box-mode>
+      <allow-big-records>true</allow-big-records>
+    </gds2>
+  </reader-options>
+
+  <writer-options>
+    <gds2>
+      <libname>SIG130E</libname>
+      <max-cellname-length>32000</max-cellname-length>
+      <max-vertex-count>4000</max-vertex-count>
+    </gds2>
+  </writer-options>
+
+  <drc>
+    <description>SIG130E DRC v0.1</description>
+    <script>../drc/sig130e.drc</script>
+  </drc>
+</technology>

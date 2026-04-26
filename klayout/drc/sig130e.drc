@@ -1,0 +1,164 @@
+# ============================================================
+# SIG130E DRC Deck v0.1
+# Virtual 130nm CMOS PDK
+# Core: 1.5V / IO: 3.0V
+# Rule scope: width / space
+# ============================================================
+
+report("SIG130E DRC v0.1", "sig130e_drc_v01")
+
+# ------------------------------------------------------------
+# Layer Definitions
+# ------------------------------------------------------------
+
+core_area = input(10, 0)
+io_area   = input(11, 0)
+
+nwell  = input(20, 0)
+active = input(21, 0)
+poly   = input(22, 0)
+nplus  = input(23, 0)
+pplus  = input(24, 0)
+lvt    = input(25, 0)
+hvt    = input(26, 0)
+guard  = input(27, 0)
+
+contact = input(30, 0)
+via1    = input(31, 0)
+via2    = input(32, 0)
+via3    = input(33, 0)
+via4    = input(34, 0)
+
+metal1 = input(40, 0)
+metal2 = input(41, 0)
+metal3 = input(42, 0)
+metal4 = input(43, 0)
+metal5 = input(44, 0)
+
+pad      = input(50, 0)
+pad_open = input(51, 0)
+esd      = input(52, 0)
+
+text     = input(60, 0)
+boundary = input(61, 0)
+pin      = input(62, 0)
+blockage = input(63, 0)
+fill     = input(64, 0)
+
+# ------------------------------------------------------------
+# Area Rules
+# ------------------------------------------------------------
+
+core_area.width(1.00.um).output("AREA.W.1", "core_area minimum width < 1.00um")
+io_area.width(1.00.um).output("AREA.W.2", "io_area minimum width < 1.00um")
+
+core_area.space(io_area, 1.00.um).output("AREA.S.1", "core_area to io_area space < 1.00um")
+
+(core_area & io_area).output("AREA.O.1", "core_area and io_area must not overlap")
+
+# active/poly crossing both core_area and io_area
+(active & core_area & io_area).output("AREA.X.1", "active crosses both core_area and io_area")
+(poly   & core_area & io_area).output("AREA.X.2", "poly crosses both core_area and io_area")
+
+# ------------------------------------------------------------
+# Well / Active / Poly Rules
+# ------------------------------------------------------------
+
+nwell.width(0.84.um).output("NW.W.1", "nwell minimum width < 0.84um")
+nwell.space(1.20.um).output("NW.S.1", "nwell minimum space < 1.20um")
+
+active.width(0.22.um).output("OD.W.1", "active minimum width < 0.22um")
+active.space(0.28.um).output("OD.S.1", "active minimum space < 0.28um")
+
+poly.width(0.13.um).output("PO.W.1", "poly minimum width < 0.13um")
+poly.space(0.18.um).output("PO.S.1", "poly minimum space < 0.18um")
+
+# ------------------------------------------------------------
+# Implant Rules
+# ------------------------------------------------------------
+
+nplus.width(0.30.um).output("NP.W.1", "nplus minimum width < 0.30um")
+nplus.space(0.30.um).output("NP.S.1", "nplus minimum space < 0.30um")
+
+pplus.width(0.30.um).output("PP.W.1", "pplus minimum width < 0.30um")
+pplus.space(0.30.um).output("PP.S.1", "pplus minimum space < 0.30um")
+
+lvt.width(0.50.um).output("VT.W.1", "lvt minimum width < 0.50um")
+lvt.space(0.50.um).output("VT.S.1", "lvt minimum space < 0.50um")
+
+hvt.width(0.50.um).output("VT.W.2", "hvt minimum width < 0.50um")
+hvt.space(0.50.um).output("VT.S.2", "hvt minimum space < 0.50um")
+
+# ------------------------------------------------------------
+# Contact / Via Rules
+# ------------------------------------------------------------
+# NOTE:
+# width() checks minimum size.
+# Exact square size check is added using bbox_min / bbox_max style
+# only if needed in later versions.
+# v0.1 treats fixed size as minimum width rule.
+
+contact.width(0.16.um).output("CO.W.1", "contact minimum width < 0.16um")
+contact.space(0.18.um).output("CO.S.1", "contact minimum space < 0.18um")
+
+via1.width(0.18.um).output("V1.W.1", "via1 minimum width < 0.18um")
+via1.space(0.20.um).output("V1.S.1", "via1 minimum space < 0.20um")
+
+via2.width(0.20.um).output("V2.W.1", "via2 minimum width < 0.20um")
+via2.space(0.22.um).output("V2.S.1", "via2 minimum space < 0.22um")
+
+via3.width(0.22.um).output("V3.W.1", "via3 minimum width < 0.22um")
+via3.space(0.24.um).output("V3.S.1", "via3 minimum space < 0.24um")
+
+via4.width(0.24.um).output("V4.W.1", "via4 minimum width < 0.24um")
+via4.space(0.26.um).output("V4.S.1", "via4 minimum space < 0.26um")
+
+# ------------------------------------------------------------
+# Metal Rules
+# ------------------------------------------------------------
+
+metal1.width(0.20.um).output("M1.W.1", "metal1 minimum width < 0.20um")
+metal1.space(0.20.um).output("M1.S.1", "metal1 minimum space < 0.20um")
+
+metal2.width(0.22.um).output("M2.W.1", "metal2 minimum width < 0.22um")
+metal2.space(0.22.um).output("M2.S.1", "metal2 minimum space < 0.22um")
+
+metal3.width(0.24.um).output("M3.W.1", "metal3 minimum width < 0.24um")
+metal3.space(0.24.um).output("M3.S.1", "metal3 minimum space < 0.24um")
+
+metal4.width(0.28.um).output("M4.W.1", "metal4 minimum width < 0.28um")
+metal4.space(0.28.um).output("M4.S.1", "metal4 minimum space < 0.28um")
+
+metal5.width(0.40.um).output("M5.W.1", "metal5 minimum width < 0.40um")
+metal5.space(0.40.um).output("M5.S.1", "metal5 minimum space < 0.40um")
+
+# ------------------------------------------------------------
+# Pad / IO Rules
+# ------------------------------------------------------------
+
+pad.width(60.0.um).output("PAD.W.1", "pad minimum width < 60.0um")
+pad.space(20.0.um).output("PAD.S.1", "pad minimum space < 20.0um")
+
+pad_open.width(50.0.um).output("PADO.W.1", "pad_open minimum width < 50.0um")
+pad_open.space(20.0.um).output("PADO.S.1", "pad_open minimum space < 20.0um")
+
+esd.width(5.0.um).output("ESD.W.1", "esd minimum width < 5.0um")
+esd.space(5.0.um).output("ESD.S.1", "esd minimum space < 5.0um")
+
+# ------------------------------------------------------------
+# Marker / Boundary Rules
+# ------------------------------------------------------------
+
+pin.width(0.20.um).output("PIN.W.1", "pin minimum width < 0.20um")
+pin.space(0.20.um).output("PIN.S.1", "pin minimum space < 0.20um")
+
+boundary.width(0.10.um).output("BND.W.1", "boundary minimum width < 0.10um")
+
+blockage.width(0.20.um).output("BLK.W.1", "blockage minimum width < 0.20um")
+
+fill.width(0.20.um).output("FILL.W.1", "fill minimum width < 0.20um")
+fill.space(0.20.um).output("FILL.S.1", "fill minimum space < 0.20um")
+
+# ------------------------------------------------------------
+# End
+# ------------------------------------------------------------
